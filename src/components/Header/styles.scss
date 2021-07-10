@@ -1,0 +1,88 @@
+@import '../../styles/variables.scss';
+div{
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.875rem;
+
+  background: linear-gradient(to right, $blue-200, $blue-400);
+  .menuDesktop {
+    ul {
+      display: flex;
+      list-style-type: none;
+      li{
+        padding: 0 1.2rem;
+        a{
+          text-decoration: none;
+          color: $whiteDark;
+          font-weight: lighter;
+          transition: filter 0.2s;
+          &:hover{
+            filter: brightness(0.8);
+          }
+        }
+      }
+    }
+  }
+
+
+  .menuMobile {
+    display: none;
+    .icons{
+      text-align: center;
+      vertical-align: middle;
+    }      
+    .icons:first-child{
+      color: $whiteDark;
+      position: relative;
+      font-size: 2rem;
+      top: 3px;
+    }
+    ul {
+      list-style-type: none;
+      display: none;
+      z-index: 4;
+      position: absolute;
+      top: 67px;
+      left: 0px;
+      width: 100%;
+
+      flex-direction: column;
+      text-align: center;
+      padding: 0.5rem;
+      font-size: 1.5rem;
+     
+      background: linear-gradient(to right, $blue-200, $blue-400);
+        li{
+          padding: 0.3rem;
+          a{
+            text-decoration: none;
+            color: $whiteDark;
+
+          }
+        }
+      }
+  }
+}
+
+@media screen and (max-width: 1024px){
+  .header .menuDesktop{
+    display: none;
+  }
+  .header .menuMobile{
+    display: flex;
+    ul{
+      &.menuOpened{
+        display: flex;
+      }
+      &.menuClosed{
+        display: none;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,42 @@
+@import '../../styles/variables.scss';
+.slider{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+.image{
+  width: 80vw;
+  height: 800px;
+  border-radius: 1rem;
+  z-index: 2;
+}
+.rightArrow{
+  position: absolute;
+  top: 42%;
+  right: 1rem;
+  font-size: 3.5rem;
+  color: $blue-200;
+  cursor: pointer;
+  z-index: 4;
+}
+.leftArrow{
+  position: absolute;
+  top: 42%;
+  left: 1rem;
+  font-size: 3.5rem;
+  color: $blue-200;
+  cursor: pointer;
+  z-index: 4;
+}
+.slide {
+  opacity: 0;
+  transition: 1s ease;
+
+}
+.active{
+  opacity: 1;
+  transition: 1s ease;
+  transform: scale(1.08);
+}
