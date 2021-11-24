@@ -15,7 +15,7 @@ export function Main() {
             <div className="contentWrapper">
               <span>Olá, eu sou o</span>
               <h2>Lucas Vinícius Góis Nogueira</h2>
-              <span>Desenvolvedor front-end</span>
+              <span>Desenvolvedor Web</span>
               <div className="socials">
                 <a href="https://github.com/fawnbr" target="_blank" rel="noreferrer">
                   <AiFillGithub />
